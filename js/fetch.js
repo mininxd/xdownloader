@@ -1,11 +1,6 @@
-
-const endpoint, input;
+var endpoint, input;
 endpoint = 'spotify';
 input = document.getElementById("inputQueryEl");
-
-input.addEventListener("keyup", () => {
-console.log(input.value);
-})
 
 
 // Plain JS fetch
