@@ -22,17 +22,15 @@ export async function fetchDown() {
  
   
   loading.style.display = "none";
-      console.log(data);
       console.log(JSON.stringify(data));
-      
-      judul.innerHTML = JSON.text(data.judul);
-     judulLagu.innerHTML = JSON.text(data.judul);
-      albumLagu.innerHTML = JSON.text(data.album);
-      artisLagu.innerHTML = JSON.text(data.artis[0]);
-      rilisLagu.innerHTML = JSON.text(data.rilis);
+     
+      judul.innerHTML = JSON.stringify(data.judul);
+     judulLagu.innerHTML = JSON.stringify(data.judul);
+      albumLagu.innerHTML = JSON.stringify(data.album);
+      artisLagu.innerHTML = JSON.stringify(data.artis[0]);
+      rilisLagu.innerHTML = JSON.stringify(data.rilis);
       thumb.setAttribute('src', data.thumb);
       
-     
      document.getElementById("resultContainer").style.opacity = "1";
     }
     catch(error) {
