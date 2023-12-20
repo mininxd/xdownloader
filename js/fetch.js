@@ -1,18 +1,9 @@
-var endpoint, input, judul, judulLagu, albumLagu, rilisLagu, artisLagu, loading;
+var endpoint, input;
  endpoint = 'spotify';
  input = document.getElementById("inputQueryEl");
- judul = document.getElementById("judul");
- judulLagu = document.getElementById("judulLagu");
- albumLagu  = document.getElementById("albumLagu");
- artisLagu  = document.getElementById("artisLagu");
- rilisLagu  = document.getElementById("rilisLagu");
- loading = document.getElementById('loading');
  
  
- 
- 
- 
-// Plain JS fetch
+
 export async function fetchDown() {
   loading.style.display = "block";
 
@@ -22,15 +13,21 @@ export async function fetchDown() {
  
   
   loading.style.display = "none";
+      console.log(data);
       console.log(JSON.stringify(data));
+      console.log(JSON.stringify(data.audio));
      
-      judul.innerHTML = JSON.stringify(data.judul);
-     judulLagu.innerHTML = JSON.stringify(data.judul);
-      albumLagu.innerHTML = JSON.stringify(data.album);
-      artisLagu.innerHTML = JSON.stringify(data.artis[0]);
-      rilisLagu.innerHTML = JSON.stringify(data.rilis);
+      judul.innerHTML = JSON.stringify(data.judul).toString().replace(/"/g,"");
+     judulLagu.innerHTML = JSON.stringify(data.judul).toString().replace(/"/g,"");
+      albumLagu.innerHTML = JSON.stringify(data.album).toString().replace(/"/g,"");
+      artisLagu.innerHTML = JSON.stringify(data.artis[0]).toString().replace(/"/g,"");
+      rilisLagu.innerHTML = JSON.stringify(data.rilis).toString().replace(/"/g,"");
       thumb.setAttribute('src', data.thumb);
       
+      document.getElementById("downloadLink").setAttribute('href', data.audio);
+      document.getElementById("downloadLink").setAttribute('download',"");
+      
+      inputQueryEl.removeAttribute("disabled", "");
      document.getElementById("resultContainer").style.opacity = "1";
     }
     catch(error) {
