@@ -4,14 +4,13 @@ input = document.getElementById("inputQueryEl");
 
 
 // Plain JS fetch
-export function fetchDown() {
+export async function fetchDown() {
   $('.loading').css('display','block');
-  
-fetch('http://api.wizzteam.my.id/api/downloader?endpoint='+ endpoint + '&text=' + input.value,  {
-method:'GET'
-}).then((res) => {
-  return res.json();
-}).then((data) => {
+
+ try{
+ const response = await fetch('http://api.wizzteam.my.id/api/downloader?endpoint=' + endpoint + '&text=' + input.value);
+        const data = await response.json();
+ 
   $('.loading').css('display','none');
       console.log(data);
       console.log(JSON.stringify(data));
@@ -25,14 +24,14 @@ method:'GET'
       
       $('.resultContainer').css('opacity','1')
       $("#inputQueryEl").removeAttr('disabled');
-    })
-    .catch((error) => {
+    }
+    catch(error) {
       console.log(error);
       $("#inputQueryEl").removeAttr('disabled');
   $('.loading').css('display','none');
       
     }
     
-    );
+    
 }
     

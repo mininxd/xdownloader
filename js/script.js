@@ -12,9 +12,6 @@ $('#inputQueryEl').keypress(
 });
 
 
-$('#thumb').attr('src','../test.jpeg')
-$('#judulLagu').html('Binding Lights')
-
 
 $(document).ready().scroll(function() {
   if ($(this).scrollTop() > 10) {
