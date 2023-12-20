@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
-var port = 8800
+var port = 80
 
 http.createServer(function (request, response) {
     console.log('request ', request.url);
