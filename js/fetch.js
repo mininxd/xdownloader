@@ -1,5 +1,6 @@
-const endpoint = 'spotify';
-const input = document.getElementById("inputQueryEl");
+var endpoint, input;
+ endpoint = 'spotify';
+ input = document.getElementById("inputQueryEl");
 
 
 // Plain JS fetch
