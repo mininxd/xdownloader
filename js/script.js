@@ -17,17 +17,19 @@ inputQueryEl.setAttribute("disabled", "");
 
 setTimeout(function() {
   alert("a");
-fetch('http://api.wizzteam.my.id/api/downloader?endpoint=spotify&text=ambatukam', {
+async function abc() {
+
+ try{
+  const res = await fetch('http://api.wizzteam.my.id/api/downloader?endpoint=spotify&text=ambatukam');
+  const data = await res.json();
   
-}).then(res => {
-  return res.json()
-}).then((data) => {
         console.log(data);
-        alert(JSON.text(data))
-}).catch((error) => {
-        alert(JSON.text(error))
+        alert(JSON.stringify(data))
+} catch(error) {
+        alert(JSON.stringify(error))
         console.log(error);
- })
+ }
+}
 
-
+abc();
 }, 4000);
