@@ -14,5 +14,5 @@ var pHolder = [
 'Hapus Aku - NIDJI',
 ]
 var rand = Math.floor(Math.random() * pHolder.length);
-$('#inputQueryEl').attr('placeholder', pHolder[rand])
+document.getElementById("inputQueryEl").placeholder = pHolder[rand];
 }

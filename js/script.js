@@ -2,22 +2,15 @@ import {spotify} from "./placeholder.js";
 import {fetchDown} from "./fetch.js";
 spotify();
 
-$('#inputQueryEl').keypress(
+var inputQueryEl = document.getElementById("inputQueryEl");
+
+inputQueryEl.addEventListener("keyup",
   function(event){
-    if (event.which == '13') {
+    if (event.which == 13) {
       fetchDown();
-      $("#inputQueryEl").blur();
-      $("#inputQueryEl").attr('disabled', 'true');
+      inputQueryEl.blur();
+inputQueryEl.setAttribute("disabled", "");
     }
 });
 
 
-
-$(document).ready().scroll(function() {
-  if ($(this).scrollTop() > 10) {
-   $('.title').css('font-size','35px');
-  }
-  if ($(this).scrollTop() < 4) {
-   $('.title').css('font-size','50px');
-  }
-})
