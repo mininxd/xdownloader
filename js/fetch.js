@@ -17,8 +17,8 @@ export async function fetchDown() {
   loading.style.display = "block";
 
  try{
- const response = await fetch('http://api.wizzteam.my.id/api/downloader?endpoint=' + endpoint + '&text=' + input.value);
-        const data = await response.json();
+ const res = await fetch('http://api.wizzteam.my.id/api/downloader?endpoint=' + endpoint + '&text=' + input.value);
+        const data = await res.json();
  
   
   loading.style.display = "none";
@@ -30,7 +30,7 @@ export async function fetchDown() {
       albumLagu.innerHTML = JSON.text(data.album);
       artisLagu.innerHTML = JSON.text(data.artis[0]);
       rilisLagu.innerHTML = JSON.text(data.rilis);
-      thumb.setAttribute('src', JSON.text(data.thumb));
+      thumb.setAttribute('src', data.thumb);
       
      
      document.getElementById("resultContainer").style.opacity = "1";

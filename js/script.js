@@ -4,7 +4,7 @@ spotify();
 
 var inputQueryEl = document.getElementById("inputQueryEl");
 
-inputQueryEl.addEventListener("keyup",
+inputQueryEl.addEventListener("keydown",
   function(event){
     if (event.which == 13) {
       fetchDown();
