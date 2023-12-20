@@ -90,3 +90,7 @@ div.btn-other:hover, button.btn:hover {
 i.bi-heart-fill {
   color:#da1300;
 }
+
+a, a:hover, a:visited, a:focus, a:active {
+  color: #000;
+}
