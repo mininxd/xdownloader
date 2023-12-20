@@ -1,4 +1,4 @@
-var endpoint, input, judul, judulLagu, albumLagu, rilisLagu, artisLagu, loading, thumb;
+var endpoint, input, judul, judulLagu, albumLagu, rilisLagu, artisLagu, loading;
  endpoint = 'spotify';
  input = document.getElementById("inputQueryEl");
  judul = document.getElementById("judul");
@@ -7,7 +7,7 @@ var endpoint, input, judul, judulLagu, albumLagu, rilisLagu, artisLagu, loading,
  artisLagu  = document.getElementById("artisLagu");
  rilisLagu  = document.getElementById("rilisLagu");
  loading = document.getElementById('loading');
- thumb = document.getElementById("thumb");
+ 
  
  
  
