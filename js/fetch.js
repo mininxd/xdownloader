@@ -16,12 +16,12 @@ export async function fetchDown() {
       console.log(JSON.stringify(data));
       
       $('.judul').html(data.judul);
-      $('.judulLagu').html(data.judul);
-      $('.artisLagu').html(data.artis);
-      $('.albumLagu').html(data.album);
-      $('.rilisLagu').html(data.rilis);
-      
-      
+      $('#judulLagu').html(data.judul);
+      $('#albumLagu').html(data.album);
+      $('#artisLagu').html(data.artis[0]);
+      $('#rilisLagu').html(data.rilis);
+     
+     
       $('.resultContainer').css('opacity','1')
       $("#inputQueryEl").removeAttr('disabled');
     }
