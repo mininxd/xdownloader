@@ -5,6 +5,7 @@ var endpoint, input;
  
 
 export async function fetchDown() {
+  errorMsg.innerHTML =""
   loading.style.display = "block";
 
  try{
@@ -34,6 +35,7 @@ export async function fetchDown() {
       console.log(error);
       inputQueryEl.removeAttribute("disabled", "");
       loading.style.display = "none";
+      errorMsg.innerHTML ="// Error"
   
       
     }
