@@ -5,7 +5,7 @@ const app = express()
 const PORT = 8800
 
 
-app.use(express.static('./'))
+app.use(express.static('./public'))
 app.use(express.static(__dirname))
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `)
