@@ -8,6 +8,9 @@
   font-family: 'Product Sans Regular';
   scroll-behavior: smooth;
 }
+body.body, div.container {
+  background:#F3F4F6;
+}
 .bold {
   font-family: 'Product Sans Bold';
 }
@@ -38,17 +41,29 @@ li.list-group-item:hover, li.list-group-item:focus {
   background:#3d3d3d;
   color:#fff;
 }
+ul.list-group-horizontal {
+  border-radius: 5px;
+  user-select: none;
+}
 li.disabled {
   color:#aaa !important;
 }
 
 
 div#resultContainer {
-  border : 1px #00000033 solid;
+  border : 1px #00000025 solid;
   margin: 10px;
   height: fit-content;
+  border-radius: 10px;
+  background: #fff;
 }
-
+div.card {
+  border:0;
+  border-radius: 0;
+}
+img.card-img-top {
+  border-radius: 10px;
+}
 span.judul, div.card-body {
   font-family: 'Product Sans Bold';
   font-size:20px;
@@ -91,7 +106,12 @@ i.bi-heart-fill {
   color:#da1300;
 }
 
-
+button.down-btn {
+  border-radius: 5px;
+  width: 80%;
+  padding: 2px;
+  height: 35px;
+}
 a, a:hover, a:visited, a:focus, a:active {
   color: #000;
 }
