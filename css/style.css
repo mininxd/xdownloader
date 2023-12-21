@@ -115,3 +115,8 @@ button.down-btn {
 a, a:hover, a:visited, a:focus, a:active {
   color: #000;
 }
+#errorMsg {
+  font-family: 'Product Sans Regular';
+  color: #f96868;
+  font-style: italic;
+}
