@@ -75,11 +75,12 @@ span.judul, div.card-body {
 div.infoResult {
   margin: 1.5em;
   margin-left: 2.4em;
-  font-family: 'Product Sans Medium Regular';
+  font-family: 'Product Sans Regular';
 }
 div.infoR {
   display: inline-block;
  width: 55px;
+ font-family: 'Product Sans Medium Regular';
 }
 button.btn {
   background: #fff;
