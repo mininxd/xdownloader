@@ -1,19 +1,14 @@
-const express = require('express')
-const path = require('path')
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = process.env.PORT || 3000;
 
-const app = express()
-const PORT = 8800
-
-
-app.use(express.static('./public'))
-app.use(express.static(__dirname))
-app.listen(PORT, () => {
-  console.log(`API listening on PORT ${PORT} `)
-})
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/home.html'));
+  res.sendFile(path.join(__dirname, './home.html'));
 });
 
-// Export the Express API
-module.exports = app
+app.listen(port, () => {
+  console.log(`Server is running on 127.0.0.1:${port}`);
+});
