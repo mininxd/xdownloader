@@ -26,7 +26,7 @@ export async function fetchDown() {
       thumb.setAttribute('src', data.thumb);
       
       document.getElementById("downloadLink").setAttribute('href', data.audio);
-      document.getElementById("downloadLink").setAttribute('download',"");
+      document.getElementById("downloadLink").setAttribute('download', data.audio);
       
       inputQueryEl.removeAttribute("disabled", "");
      document.getElementById("resultContainer").style.opacity = "1";
