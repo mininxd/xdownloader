@@ -25,8 +25,8 @@ export async function fetchDown() {
       rilisLagu.innerHTML = JSON.stringify(data.rilis).toString().replace(/"/g,"");
       thumb.setAttribute('src', data.thumb);
       
-      document.getElementById("downloadLink").setAttribute('href', data.audio);
-      document.getElementById("downloadLink").setAttribute('download', data.audio);
+      downloadLink.setAttribute('href', data.audio);
+      downloadLink.setAttribute('download', data.audio);
       
       inputQueryEl.removeAttribute("disabled", "");
      document.getElementById("resultContainer").style.opacity = "1";
