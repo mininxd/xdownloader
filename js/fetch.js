@@ -9,7 +9,7 @@ export async function fetchDown() {
   loading.style.display = "block";
 
  try{
- const res = await fetch('https://api.wizzteam.my.id/api/downloader?endpoint=' + endpoint + '&text=' + input.value);
+ const res = await fetch('https://api.wizzteam.my.id/api/?endpoint=' + endpoint + '&text=' + input.value);
         const data = await res.json();
  
   
